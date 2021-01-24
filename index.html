@@ -14,10 +14,10 @@
         <img src="img/main_logo.svg" width="220" height="47" alt="«Техномарт»">
       </a>
       <form class="header__search" method="GET" action="https://echo.htmlacademy.ru/">
-        <label class="header__search-label" for="search">
-          <span>Поиск:</span>
-          <input type="search" name="search" id="search">
-        </label>
+        <input type="search" name="search" id="search" placeholder="Поиск">
+        <button type="submit">
+          <!-- svg для лупы -->
+        </button>
       </form>
       <a class="header__bookmarks" href="#">Закладки: 0</a>
       <a class="header__cart" href="#">Корзина: 0</a>
@@ -113,8 +113,9 @@
 
 
     <section class="top-products">
-      <h2 class="top-products__title">Популярные товары:</h2>
-      <a class="top-products__link" href="#">все популярные товары</a>
+      <h2 class="top-products__title">Популярные товары:
+        <a class="top-products__title-link" href="#">все популярные товары</a>
+      </h2>
       <ul class="top-products__list">
         <li class="top-products__item">
           <a class="top-products__link" href="#">
@@ -124,7 +125,7 @@
           <p class="top-products__price">32500 Р.</p>
           <a class="top-products__link" href="#">25500 Р.</a>
         </li>
-        <li class="top-products__item">
+        <li class="top-products__item top-products__item--new">
           <a class="top-products__link" href="#">
             <img src="img/bosch_bfg_3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
           </a>
@@ -140,7 +141,7 @@
           <p class="top-products__price">30500 Р.</p>
           <a href="#">25500 Р.</a>
         </li>
-        <li class="top-products__text">
+        <li class="top-products__text top-products__item--new">
           <a class="top-products__link" href="#">
             <img src="img/bosch_bfg_2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
           </a>
@@ -150,6 +151,7 @@
         </li>
       </ul>
     </section>
+
 
     <section class="top-company">
       <h2 class="top-company__title">Популярные Производители:</h2>
@@ -199,60 +201,81 @@
     </section>
 
     <section class="services">
-      <h2 class="services__main-title">Сервисы</h2>
-      <ul class="services__list">
-        <li class="services__item">
-          <h3 class="services__title">Сервисы</h3>
-          <p class="services__text">Хороший интернет-магазин отличается от плохого не только ценами!
-            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-        </li>
-        <li class="services__item">
-          <h3 class="services__title">Доставка</h3>
-          <p class="services__text">Мы с удовольствием доставим ваш товар прямо
-            к вашему подъезду совершенно бесплатно!
-            Ведь мы неплохо заработаем,
-            поднимая его на ваш этаж!</p>
-        </li>
-        <li class="services__item">
-          <h3 class="services__title">Гарантия</h3>
-          <p class="services__text">Если купленный у нас товар поломается или заискрит, а также в случае пожара,
-            спровоцированного его
-            возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж
-            восстановите как-нибудь сами.</p>
-        </li>
-        <li class="services__item">
-          <h3 class="services__title">Кредит</h3>
-          <p class="services__text">Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
-        </li>
-      </ul>
-      <a class="services__link" href="#">ОТПРАВИТЬ ЗАЯВКУ</a>
+      <div class="services__top">
+        <h2 class="services__title">Сервисы</h2>
+        <p class="services__describe">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо
+          всех сил, чтобы сделать ваши покупки приятными.
+        </p>
+      </div>
+
+
+
+      <div class="services__bottom slider">
+        <ul class="services-toggles__list">
+          <li class="services-toggles__item">
+            <p class="services-toggles__text">Доставка</p>
+          </li>
+          <li class="services-toggles__item">
+            <p class="services-toggles__text">Гарантия</p>
+          </li>
+          <li class="services-toggles__item">
+            <p class="services-toggles__text">Кредит</p>
+          </li>
+        </ul>
+
+        <div class="services__wrapper">
+          <ul class="services__list">
+            <li class="services__item">
+              <h3 class="services__title">Доставка</h3>
+              <p class="services__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно
+                бесплатно!
+                Ведь мы неплохо заработаем,
+                поднимая его на ваш этаж!</p>
+            </li>
+            <li class="services__item">
+              <h3 class="services__title">Гарантия</h3>
+              <p class="services__text">Если купленный у нас товар поломается или заискрит, а также в случае пожара,
+                спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший
+                товар на новый. Дом уж восстановите как-нибудь сами.</p>
+            </li>
+            <li class="services__item">
+              <h3 class="services__title">Кредит</h3>
+              <p class="services__text">Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
+              </p>
+            </li>
+          </ul>
+          <a class="services__link" href="#">ОТПРАВИТЬ ЗАЯВКУ</a>
+        </div>
+      </div>
     </section>
 
-    <section class="about">
-      <h2 class="about__title">КОМПАНИЯ «Техномарт»</h2>
-      <p class="about__text">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и
-        строительства не оставит
-        равнодушными любителей сэкономить на гастарбайтерах.</p>
+    <div class="contacts__wrapper">
+      <section class="about">
+        <h2 class="about__title">КОМПАНИЯ «Техномарт»</h2>
+        <p class="about__text">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и
+          строительства не оставит
+          равнодушными любителей сэкономить на гастарбайтерах.</p>
 
-      <p class="about__text">Мы можем доставить ваш товар в самые отдаленные точки России!
-        Техномарт работает со многими транспортными компаниями:</p>
-      <ul class="about__list">
-        <li class="about__item">Деловые линии</li>
-        <li class="about__item">Автотрейдинг</li>
-        <li class="about__item">ЖелДорЭкспедиция</li>
-      </ul>
-      <a class="about__link" href="#">Подробнее о компании</a>
-    </section>
+        <p class="about__text">Мы можем доставить ваш товар в самые отдаленные точки России!
+          Техномарт работает со многими транспортными компаниями:</p>
+        <ul class="about__list">
+          <li class="about__item">Деловые линии</li>
+          <li class="about__item">Автотрейдинг</li>
+          <li class="about__item">ЖелДорЭкспедиция</li>
+        </ul>
+        <a class="about__link" href="#">Подробнее о компании</a>
+      </section>
 
-    <section class="contacts">
-      <h2>Наши контакты</h2>
-      <p class="contacts__text">Вы можете забрать товар сами,
-        заехав в наш офис:</p>
-      <a class="contacts__link" href="#">
-        <img src="img/map.jpg" width="300" height="158" alt="Карта">
-      </a>
-      <a class="contacts__link" href="#">Заблудились? Напишите нам!</a>
-    </section>
+      <section class="contacts">
+        <h2>Наши контакты</h2>
+        <p class="contacts__text">Вы можете забрать товар сами,
+          заехав в наш офис:</p>
+        <a class="contacts__link" href="#">
+          <img src="img/map.jpg" width="300" height="158" alt="Карта">
+        </a>
+        <a class="contacts__link" href="#">Заблудились? Напишите нам!</a>
+      </section>
+    </div>
   </main>
 
   <footer class="footer">
@@ -284,10 +307,14 @@
 
 
     <div class="footer__mid">
-      <p class="footer__address">
-        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-        <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-      </p>
+      <div class="footer__contacts">
+        <p class="footer__address">
+          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+        </p>
+        <p class="footer__tel">
+          <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+        </p>
+      </div>
 
       <div class="footer-catalog">
         <ul class="footer-catalog__list">
@@ -336,6 +363,29 @@
     </div>
 
   </footer>
+
+  <section class="popup-form popup-form-hide">
+    <div class="popup-form__wrapper">
+      <button class="popup-form__button button" type="button">Закрыть</button>
+      <form class="popup-form__form" action="https://echo.htmlacademy.ru/" method="GET">
+        <div class="popup-form__group popup-form__name">
+          <label for="username">Ваше имя:</label>
+          <input type="text" name="username" id="username" placeholder="Ваше имя">
+        </div>
+        <div class="popup-form__group popup-form__email">
+          <label for="email">Ваш email:</label>
+          <input type="email" name="email" id="email" placeholder="email@example.com">
+        </div>
+        <div class="popup-form__group popup-form__comment">
+          <label for="comment">Текст письма:</label>
+          <textarea name="comment" id="comment-field" placeholder="В свободной форме"></textarea>
+        </div>
+        <button class="popup-form__submit button" type="submit">Отправить</button>
+
+      </form>
+    </div>
+
+  </section>
 
 </body>
 
