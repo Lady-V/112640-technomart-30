@@ -1,0 +1,180 @@
+:root {
+  --basic-red: #EE3643;
+  --basic-green: #63A63E;
+  --basic-grey: #32425C;
+  --basic-greylight: #C5C5C5;
+  --basic-background: #F1F5F7;
+  --white: #FFFFFF;
+  --special-yellow: #FFBF47;
+  --special-blue: #3BBCE3;
+  --special-lilac: #DC91D8;
+  --special-greenlight: #8ED78F;
+  --special-yellowlight: #FFC047;
+  --success: #5FBB2D;
+  --warning: #FFD180;
+  --error: #BA2732;
+  --greylight: #A9A9A9;
+  --greymiddlelight: #D7DCDE;
+  --greylightlight: #F7F3EC;
+  --greydark: #ABABAB;
+  --black: #000000;
+  --green: #00ca74;
+}
+
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../fonts/cuprum.woff") format(woff),
+    url("../fonts/cuprum.woff2") format(woff2);
+}
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src:
+    url("../fonts/cuprumitalic.woff") format(woff),
+    url("../fonts/cuprumitalic.woff2") format(woff2);
+}
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../fonts/cuprumbold.woff") format(woff),
+    url("../fonts/cuprumbold.woff2") format(woff2);
+}
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src:
+    url("../fonts/cuprumbolditalic.woff") format(woff),
+    url("../fonts/cuprumbolditalic.woff2") format(woff2);
+}
+
+@font-face {
+  font-family: "Ptsans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../fonts/ptsans.woff") format(woff),
+    url("../fonts/ptsans.woff2") format(woff2);
+}
+
+@font-face {
+  font-family: "Ptsans";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../fonts/ptsansbold.woff") format(woff),
+    url("../fonts/ptsansbold.woff2") format(woff2);
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", "Ptsans", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--black);
+}
+
+
+.filter-price {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.filter-price__range {
+  width: 260px;
+  margin-top: 100px;
+}
+
+.filter-price legend {
+  font-family: Ptsans;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.filter-price__range-controls {
+  position: relative;
+  height: 41px;
+  margin-bottom: 9px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: var(--greylightlight);
+}
+
+.filter-price__range-controls .filter-price__scale {
+  height: 2px;
+  background-color: var(--greymiddlelight);
+}
+
+.filter-price__range-controls .filter-price__bar {
+  width: 70%;
+  height: 2px;
+  background-color: var(--green);
+}
+
+.filter-price__range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--white);
+  background-color: var(--greydark);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(--greydark);
+  cursor: pointer;
+}
+
+.filter-price__range-controls .filter-price__toggles-min {
+  left: 18px;
+}
+
+.filter-price__range-controls .filter-price__toggles-max {
+  left: 160px;
+}
+
+.filter-price__price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-price__price-controls input {
+  width: 95px;
+  height: 38px;
+  text-align: center;
+  border: none;
+  background-color: var(--greylightlight);
+  font-family: "Ptsans";
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+
+
+
+
+
+
