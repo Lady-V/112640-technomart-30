@@ -218,7 +218,9 @@
 
     <aside class="filter">
       <div class="filter__wrapper">
-        <h3 class="filter__title">Фильтр:</h3>
+        <div class="filter__title-wrapper">
+          <h3 class="filter__title">Фильтр:</h3>
+        </div>
         <form class="filter__form" method="GET" action="https://echo.htmlacademy.ru/">
           <fieldset class="filter-price">
             <legend class="filter-price__title">Цена</legend>
@@ -247,9 +249,13 @@
               <li class="filter-company__item">
                 <a href="filter-bosch__icon">
                   <svg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.28499 7.48598L4.45599 10.315L12.239 18.098L26.171 4.16598L23.343 1.33698L12.239 12.439L7.28499 7.48598Z" fill="#C5C5C5"/>
-                    <path d="M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z" fill="#C5C5C5"/>
-                    </svg>
+                    <path
+                      d="M7.28499 7.48598L4.45599 10.315L12.239 18.098L26.171 4.16598L23.343 1.33698L12.239 12.439L7.28499 7.48598Z"
+                      fill="#C5C5C5" />
+                    <path
+                      d="M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z"
+                      fill="#C5C5C5" />
+                  </svg>
                 </a>
                 <input class="filter-company__input" type="checkbox" name="bosch" id="filter-bosch" checked>
                 <label for="filter-bosch">Bosch</label>
@@ -257,8 +263,10 @@
               <li class="filter-company__item">
                 <a href="filter-interskol__icon">
                   <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z" fill="#C5C5C5"/>
-                    </svg>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z"
+                      fill="#C5C5C5" />
+                  </svg>
                 </a>
                 <input class="filter-company__input" type="checkbox" name="interskol" id="filter-interskol">
                 <label for="filter-interskol">Интерскол</label>
@@ -266,9 +274,13 @@
               <li class="filter-company__item">
                 <a href="filter-makita__icon">
                   <svg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.28499 7.48598L4.45599 10.315L12.239 18.098L26.171 4.16598L23.343 1.33698L12.239 12.439L7.28499 7.48598Z" fill="#C5C5C5"/>
-                    <path d="M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z" fill="#C5C5C5"/>
-                    </svg>
+                    <path
+                      d="M7.28499 7.48598L4.45599 10.315L12.239 18.098L26.171 4.16598L23.343 1.33698L12.239 12.439L7.28499 7.48598Z"
+                      fill="#C5C5C5" />
+                    <path
+                      d="M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z"
+                      fill="#C5C5C5" />
+                  </svg>
                 </a>
                 <input class="filter-company__input" type="checkbox" name="makita" id="filter-makita" checked>
                 <label for="filter-makita">Makita</label>
@@ -276,8 +288,10 @@
               <li class="filter-company__item">
                 <a href="filter-dewalt__icon">
                   <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z" fill="#C5C5C5"/>
-                    </svg>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z"
+                      fill="#C5C5C5" />
+                  </svg>
                 </a>
                 <input class="filter-company__input" type="checkbox" name="dewalt" id="filter-dewalt">
                 <label for="filter-dewalt">Dewalt</label>
@@ -285,8 +299,10 @@
               <li class="filter-company__item">
                 <a href="filter-hitachi__icon">
                   <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z" fill="#C5C5C5"/>
-                    </svg>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z"
+                      fill="#C5C5C5" />
+                  </svg>
                 </a>
                 <input class="filter-company__input" type="checkbox" name="hitachi" id="filter-hitachi">
                 <label for="filter-hitachi">Hitachi</label>
@@ -300,25 +316,31 @@
               <li class="charge__item">
                 <a href="filter-battery__icon">
                   <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12.5C0 5.597 5.597 0 12.5 0C19.403 0 25 5.597 25 12.5C25 19.403 19.403 25 12.5 25C5.597 25 0 19.403 0 12.5ZM21 12.5C21 7.813 17.187 4 12.5 4C7.813 4 4 7.813 4 12.5C4 17.187 7.813 21 12.5 21C17.187 21 21 17.187 21 12.5Z" fill="#C5C5C5"/>
-                    <path d="M12.5 17C14.9853 17 17 14.9853 17 12.5C17 10.0147 14.9853 8 12.5 8C10.0147 8 8 10.0147 8 12.5C8 14.9853 10.0147 17 12.5 17Z" fill="#C5C5C5"/>
-                    </svg>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0 12.5C0 5.597 5.597 0 12.5 0C19.403 0 25 5.597 25 12.5C25 19.403 19.403 25 12.5 25C5.597 25 0 19.403 0 12.5ZM21 12.5C21 7.813 17.187 4 12.5 4C7.813 4 4 7.813 4 12.5C4 17.187 7.813 21 12.5 21C17.187 21 21 17.187 21 12.5Z"
+                      fill="#C5C5C5" />
+                    <path
+                      d="M12.5 17C14.9853 17 17 14.9853 17 12.5C17 10.0147 14.9853 8 12.5 8C10.0147 8 8 10.0147 8 12.5C8 14.9853 10.0147 17 12.5 17Z"
+                      fill="#C5C5C5" />
+                  </svg>
                 </a>
                 <input type="radio" name="charge-group" value="battery" id="filter-battery" checked>
                 <label for="filter-battery">Аккумуляторные</label>
               </li>
               <li class="charge__item">
                 <a href="filter-grid__icon">
-<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 12.5C0 5.597 5.597 0 12.5 0C19.403 0 25 5.597 25 12.5C25 19.403 19.403 25 12.5 25C5.597 25 0 19.403 0 12.5ZM21 12.5C21 7.813 17.187 4 12.5 4C7.813 4 4 7.813 4 12.5C4 17.187 7.813 21 12.5 21C17.187 21 21 17.187 21 12.5Z" fill="#C5C5C5"/>
-</svg>
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0 12.5C0 5.597 5.597 0 12.5 0C19.403 0 25 5.597 25 12.5C25 19.403 19.403 25 12.5 25C5.597 25 0 19.403 0 12.5ZM21 12.5C21 7.813 17.187 4 12.5 4C7.813 4 4 7.813 4 12.5C4 17.187 7.813 21 12.5 21C17.187 21 21 17.187 21 12.5Z"
+                      fill="#C5C5C5" />
+                  </svg>
                 </a>
                 <input type="radio" name="charge-group" value="grid" id="filter-grid">
                 <label for="filter-grid">Сетевые</label>
               </li>
             </ul>
           </fieldset>
-          <button class="filter__button-submit button" type="submit">Показать</button>
+          <button class="filter__button-submit" type="submit">Показать</button>
         </form>
       </div>
     </aside>
@@ -488,8 +510,7 @@
         долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы.
         Современные модели могут выполнять функции дрели,
         шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут
-        совмещены отбойный молоток и ударная
-        дрель.</p>
+        совмещены отбойный молоток и ударная дрель.</p>
     </div>
 
   </main>
