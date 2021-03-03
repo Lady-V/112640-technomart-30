@@ -187,9 +187,10 @@ img {
 }
 
 .header__logo .header__image {
-  padding: 13px 56px 17px 57px;
+  padding: 12px 56px 17px 56px;
   background-color: var(--basic-red);
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  display: block;
 }
 
 .header__logo img:active {
@@ -251,6 +252,12 @@ img {
 }
 
 .header__title {
+  margin-top: 37px;
+  margin-bottom: 44px;
+  padding-left: 30px;
+}
+
+.header__title h1 {
   max-width: 197px;
   font-size: 16px;
   line-height: 23px;
@@ -451,6 +458,7 @@ img {
 }
 
 .features__item {
+  position: relative;
   background-size: 300px 123px;
 }
 
@@ -459,6 +467,8 @@ img {
   line-height: 30px;
   font-weight: 700;
   color: var(--white);
+  padding-left: 23px;
+  margin-top: 20px;
 }
 
 .features__item .features__img {
@@ -466,12 +476,12 @@ img {
   transform: translateX(184px);
 }
 
-.figure {
+.features__figure {
   position: relative;
   margin: 0;
 }
 
-.figcaption {
+.features__figcaption {
   display: flex;
   position: absolute;
   flex-direction: column;
@@ -487,6 +497,7 @@ img {
   line-height: 36px;
   font-weight: 700;
   margin: 0;
+  color: var(--white);
 }
 
 .features__slider-item p {
@@ -495,6 +506,7 @@ img {
   font-weight: 400;
   margin: 0;
   flex-grow: 1;
+  color: var(--white);
 }
 
 .features__slider-item img {
@@ -505,6 +517,8 @@ img {
 .features__slider-item a {
   width: 192px;
   text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .features__item .features__img {
@@ -528,6 +542,8 @@ img {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
+  margin-left: 23px;
+  margin-bottom: 21px;
 }
 
 .features__item .features__link:hover {
@@ -1014,6 +1030,9 @@ img {
   list-style: none;
   display: flex;
   justify-content: space-between;
+  margin-top: 34px;
+  margin-bottom: 0;
+  padding-left: 92px;
 }
 
 .footer-catalog__list li:not(:last-child) {
@@ -1084,6 +1103,10 @@ img {
 
 .footer-social__item:hover .footer-social__link {
   background: var(--basic-red);
+}
+
+.footer__text {
+  margin-top: 35px;
 }
 
 .footer__text span {
@@ -1219,7 +1242,7 @@ img {
 
 .filter-price__range-controls {
   position: relative;
-  height: 41px;
+  height: 80px;
   margin-bottom: 9px;
   padding-top: 39px;
   padding-right: 20px;
@@ -1304,7 +1327,7 @@ img {
 }
 
 .check {
-  padding-left: 1.2em;
+  padding-left: 12px;
 }
 
 .filter-company__item-label input {
@@ -1629,6 +1652,9 @@ img {
 
 .about-tool {
   background-color: var(--basic-background);
+}
+
+.about-tool__wrapper {
   height: 261px;
 }
 
