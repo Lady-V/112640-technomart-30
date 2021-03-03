@@ -1256,7 +1256,7 @@ img {
 }
 
 .filter-price__range-controls .filter-price__bar {
-  width: 70%;
+  width: 85%;
   height: 2px;
   background-color: var(--green);
 }
