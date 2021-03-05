@@ -72,7 +72,7 @@
 }
 
 @font-face {
-  font-family: "Ptsans";
+  font-family: "PT Sans";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -82,7 +82,7 @@
 }
 
 @font-face {
-  font-family: "Ptsans";
+  font-family: "PT Sans";
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -95,7 +95,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Cuprum", "Ptsans", Arial, Helvetica, sans-serif;
+  font-family: "Cuprum", Arial, Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: var(--black);
@@ -1032,7 +1032,7 @@ img {
   justify-content: space-between;
   margin-top: 34px;
   margin-bottom: 0;
-  padding-left: 92px;
+  padding-left: 100px;
 }
 
 .footer-catalog__list li:not(:last-child) {
@@ -1155,9 +1155,9 @@ img {
   border: 2px solid var(--basic-greylight);
 }
 
-.main {
-  width: 960px;
-  margin: 0 auto;
+.breadcrumbs {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .breadcrumbs__list {
@@ -1232,7 +1232,7 @@ img {
 }
 
 .filter-price legend {
-  font-family: Ptsans;
+  font-family: PT Sans;
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
@@ -1294,7 +1294,7 @@ img {
   text-align: center;
   border: none;
   background-color: var(--greylightlight);
-  font-family: "Ptsans";
+  font-family: "PT Sans";
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
@@ -1326,27 +1326,31 @@ img {
   padding: 0;
 }
 
-.check {
-  padding-left: 12px;
+.filter-company__item-label {
+  position: relative;
 }
 
-.filter-company__item-label input {
+.check span {
+  padding-left: 1.2em;
+}
+
+.filter-company__item-label .check__box {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/checkbox-off.svg");
+  margin-left: -1.2em;
+}
+
+.filter-company__item input {
   position: absolute;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.check__box {
-  position: absolute;
-  width: 23px;
-  height: 23px;
-  background-image: url("img/checkbox-off.svg");
-  margin-left: -1.2em;
-}
-
-.filter-company__item-label input:checked+.check__box {
-  background-image: url("img/checkbox-on.svg");
+.filter-company__item input:checked+.check__box {
+  background-image: url("../img/checkbox-on.svg");
 }
 
 .filter-company__input:disabled+label {
@@ -1656,6 +1660,8 @@ img {
 
 .about-tool__wrapper {
   height: 261px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .about-tool h3 {
@@ -1666,7 +1672,6 @@ img {
   text-transform: uppercase;
   margin: 0;
   padding-top: 64px;
-  padding-left: 130px;
 }
 
 .about-tool p {
@@ -1677,12 +1682,8 @@ img {
   color: var(--black);
   margin: 0;
   padding-top: 25px;
-  padding-left: 130px;
+  width: 907px;
 }
-
-
-
-
 
 .button {
   font-size: 14px;
