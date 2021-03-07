@@ -1328,18 +1328,15 @@ img {
 
 .filter-company__item-label {
   position: relative;
-}
-
-.check span {
-  padding-left: 1.2em;
+  padding-left: 12px;
 }
 
 .filter-company__item-label .check__box {
   position: absolute;
   width: 23px;
   height: 23px;
+  margin-left: -12px;
   background-image: url("../img/checkbox-off.svg");
-  margin-left: -1.2em;
 }
 
 .filter-company__item input {
