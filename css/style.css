@@ -610,6 +610,45 @@ img {
   display: none;
 }
 
+.button__arrows .button__slide {
+  background: 0 0;
+  border: 0;
+}
+
+.button__arrows-left {
+  top: 125px;
+  left: 14px;
+}
+
+.button__arrows-right {
+  top: 125px;
+  right: 14px;
+}
+
+.button__slide {
+  position: absolute;
+  cursor: pointer;
+}
+
+.features__slider-controls {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  bottom: 36px;
+  z-index: 20;
+  width: 30px;
+  justify-content: space-between;
+}
+
+.features__slider-controls button {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 .top-products {
   margin-bottom: 70px;
   padding-left: 0;
@@ -744,22 +783,20 @@ img {
 }
 
 .top-products__price .top-products__actual-price {
-  margin: 0 0 20px 42px;
-  padding: 10px 30px;
-  border-radius: 3px;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
   color: var(--white);
-  background-color: var(--basic-red);
+  align-items: center;
+  background-image: url("../img/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 20px;
+  height: 38px;
+  padding-top: 10px;
 }
 
-.top-products__actual-price::after {
-  position: absolute;
-  content: "";
-  top: 52px;
-  right: -19px;
-  width: 0;
-  height: 0;
-  border: 19px solid var(--white);
-  border-left-color: var(--basic-red);
+.top-products__actual-price {
+  margin: 0;
 }
 
 .top-products__item {
@@ -788,6 +825,10 @@ img {
   line-height: 20px;
   font-weight: 700;
   flex-grow: 1;
+}
+
+.top-products__item:hover .top-products__actions {
+  display: block;
 }
 
 .top-company {
@@ -890,6 +931,7 @@ img {
 }
 
 .services__bottom-list {
+  position: relative;
   list-style: none;
   display: block;
   padding: 0;
@@ -897,11 +939,11 @@ img {
   margin-right: 80px;
 }
 
-.services__bottom ul::after {
+.services__bottom-list::after {
   content: "";
   position: absolute;
-  right: 20;
-  top: -40;
+  top: -9%;
+  right: 0;
   width: 10px;
   height: 272px;
   background: url("../img/shadow_for_ul.png");
@@ -925,7 +967,8 @@ img {
 
 .services-toggles__item p:hover {
   background-color: var(--basic-darkblue);
-  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;}
+  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+}
 
 .services-toggles__item p:active {
   color: var(--basic-grey);
@@ -939,7 +982,11 @@ img {
 }
 
 .services__item {
+  display: block;
   position: relative;
+  background: url("img/car.png") no-repeat;
+  width: 468px;
+  height: 261px;
 }
 
 .services__item h3 {
@@ -961,10 +1008,9 @@ img {
 
 .services__text-delivery::after {
   content: "";
-  background: url("img/car.png") no-repeat;
   position: absolute;
-  right: -73;
-  top: 131;
+  right: -73px;
+  top: 131px;
 }
 
 .services__item-invisible {
@@ -1063,19 +1109,22 @@ img {
 }
 
 .contacts__map {
-  position: absolute;
-  top: 33px;
-  left: 0;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 940px;
   height: 446px;
   filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
   background: url("../img/big_map.png") no-repeat;
+  border-top: 7px solid var(--basic-red);
 }
 
 .contacts__map-close {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 17px;
+  right: 10px;
   width: 21px;
   height: 21px;
   padding: 10px;
@@ -1083,15 +1132,20 @@ img {
   z-index: 100;
 }
 
-.contacts__map-close::before, .contacts__map-close::after {
+.contacts__map-close::before,
+.contacts__map-close::after {
   content: "";
   position: absolute;
-  top: 7;
-  right: 17;
+  top: 7px;
+  right: 17px;
   width: 5px;
   height: 25px;
   background-color: var(--basic-red);
+  transform: rotate(45deg);
+}
 
+.contacts__map-close::after {
+  transform: rotate(-45deg);
 }
 
 .footer__top {
@@ -1576,10 +1630,9 @@ img {
 .filter-company__item-label {
   position: relative;
   display: block;
-  padding-left: 30px;
+  padding-left: 35px;
   margin-bottom: 20px;
 }
-
 
 .filter-company__item-label .check__box {
   position: absolute;
@@ -1635,7 +1688,7 @@ img {
 .charge__item-label {
   position: relative;
   display: block;
-  padding-left: 30px;
+  padding-left: 35px;
   margin-bottom: 20px;
 }
 
@@ -1655,11 +1708,11 @@ img {
   appearance: none;
 }
 
-.charge__item:checked+.radio__box {
+.charge__item input:checked+.radio__box {
   background-image: url("../img/radio-on.svg");
 }
 
-.charge__item:disabled+label {
+.charge__item input:disabled+label {
   color: var(--black);
   opacity: 0.4;
 }
@@ -1778,6 +1831,10 @@ img {
   padding-bottom: 48px;
 }
 
+.catalog__item:hover .catalog__actions {
+  display: block;
+}
+
 .catalog__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1840,22 +1897,16 @@ img {
 }
 
 .catalog__price .catalog__actual-price {
-  margin: 0 0 20px 42px;
-  padding: 10px 30px;
-  border-radius: 3px;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
   color: var(--white);
-  background-color: var(--basic-red);
-}
-
-.catalog__actual-price::after {
-  position: absolute;
-  content: "";
-  top: 52px;
-  right: -19px;
-  width: 0;
-  height: 0;
-  border: 19px solid var(--white);
-  border-left-color: var(--basic-red);
+  align-items: center;
+  background-image: url(../img/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: 20px;
+  height: 38px;
+  padding-top: 10px;
 }
 
 .catalog__actions {
