@@ -412,11 +412,10 @@ img {
 }
 
 .header-nav {
-  height: 0;
-  max-width: 960px;
+  max-width: 940px;
   padding: 0 auto;
   margin: 0 auto;
-  margin-bottom: 119px;
+  margin-bottom: 57px;
   background-color: var(--basic-grey);
   box-shadow: inset 0 -5px 0 var(--basic-darkblue);
 }
