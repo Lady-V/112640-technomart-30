@@ -21,10 +21,16 @@
           <img class="header__image" src="img/main__logo.png" alt="Логотип Интернет-магазина «Техномарт»">
         </a>
         <form class="header__search search" method="GET" action="https://echo.htmlacademy.ru/">
-          <input type="search" name="search" id="search" placeholder="Поиск:">
-          <label class="search__label" for="search"></label>
+          <input class="header__input" type="search" name="search" id="search" placeholder="Поиск:">
+          <button class="search__button">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"
+                fill="white" />
+            </svg>
+          </button>
         </form>
-        <a class="header__bookmarks" href="#">
+        <a class="header__bookmarks header__bookmarks-inner" href="#">
           Закладки: 0
         </a>
         <a class="header__cart-inner" href="#">
@@ -66,7 +72,7 @@
           <a class="header-nav__link" href="#">Компания</a>
         </li>
         <li class="header-nav__item">
-          <a class="header-nav__link-current" href="#">Каталог</a>
+          <a class="header-nav__link header-nav__link-current" href="#">Каталог</a>
         </li>
         <li class="header-nav__item">
           <a class="header-nav__link" href="#">Новости</a></li>
@@ -87,7 +93,7 @@
     <div class="breadcrumbs wrapper">
       <ul class="breadcrumbs__list">
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link-iconfirst" href="index.html">
+          <a class="breadcrumbs__link-item breadcrumbs__link-house" href="index.html">
             <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 7.99999V12H6V7.99999H8V12H12V7.99999L7 3.51599L2 7.99999Z" fill="#C1C6CE" />
               <path
@@ -126,7 +132,7 @@
             </div>
             <form class="filter__form" method="GET" action="https://echo.htmlacademy.ru/">
               <fieldset class="filter-price">
-                <legend class="filter-price__title">Цена</legend>
+                <legend class="filter-price__title">Цена:</legend>
                 <div class="filter-price__range">
                   <div class="filter-price__range-controls">
                     <div class="filter-price__scale">
@@ -137,10 +143,11 @@
                   </div>
                   <div class="filter-price__price-controls">
                     <label class="filter-price__price-min" for="min-price">
-                      <input type="number" name="min-price" value="0">
+                      <input type="text" name="min-price" value="0">
                     </label>
+                    <span class="filter-price-dash">—</span>
                     <label class="filter-price__price-max" for="max-price">
-                      — <input type="number" name="max-price" value="30000">
+                      <input type="text" name="max-price" value="30000">
                     </label>
                   </div>
                 </div>
@@ -150,36 +157,36 @@
                 <legend class="filter-company__title">Производители:</legend>
                 <ul class="filter-company__list">
                   <li class="filter-company__item">
+                    <input class="filter-company__input" type="checkbox" name="bosch" id="filter-bosch" checked>
                     <label class="filter-company__item-label filter-company__item-checked check" for="filter-bosch">
-                      <input class="filter-company__input" type="checkbox" name="bosch" id="filter-bosch" checked>
                       <span class="check__box"></span>
                       Bosch
                     </label>
                   </li>
                   <li class="filter-company__item">
+                    <input class="filter-company__input" type="checkbox" name="interskol" id="filter-interskol">
                     <label class="filter-company__item-label filter-company__item-check check" for="filter-interskol">
-                      <input class="filter-company__input" type="checkbox" name="interskol" id="filter-interskol">
                       <span class="check__box"></span>
                       Интерскол
                     </label>
                   </li>
                   <li class="filter-company__item">
+                    <input class="filter-company__input" type="checkbox" name="makita" id="filter-makita" checked>
                     <label class="filter-company__item-label filter-company__item-checked check" for="filter-makita">
-                      <input class="filter-company__input" type="checkbox" name="makita" id="filter-makita" checked>
                       <span class="check__box"></span>
                       Makita
                     </label>
                   </li>
                   <li class="filter-company__item">
+                    <input class="filter-company__input" type="checkbox" name="dewalt" id="filter-dewalt">
                     <label class="filter-company__item-label filter-company__item-check check" for="filter-dewalt">
-                      <input class="filter-company__input" type="checkbox" name="dewalt" id="filter-dewalt">
                       <span class="check__box"></span>
                       Dewalt
                     </label>
                   </li>
                   <li class="filter-company__item">
+                    <input class="filter-company__input" type="checkbox" name="hitachi" id="filter-hitachi">
                     <label class="filter-company__item-label filter-company__item-check check" for="filter-hitachi">
-                      <input class="filter-company__input" type="checkbox" name="hitachi" id="filter-hitachi">
                       <span class="check__box"></span>
                       Hitachi
                     </label>
@@ -191,17 +198,15 @@
                 <legend class="charge__title">Питание:</legend>
                 <ul class="charge__list">
                   <li class="charge__item">
+                    <input class="radio__input" type="radio" name="charge-group" value="battery" id="filter-battery"
+                      checked>
                     <label class="charge__item-label charge__item-radio radio" for="filter-battery">
-                      <input class="radio__input" type="radio" name="charge-group" value="battery" id="filter-battery"
-                        checked>
-                      <span class="radio__box"></span>
                       Аккумуляторные
                     </label>
                   </li>
                   <li class="charge__item">
+                    <input class="radio__input" type="radio" name="charge-group" value="grid" id="filter-grid">
                     <label class="charge__item-label charge__item-radio radio" for="filter-grid">
-                      <input class="radio__input" type="radio" name="charge-group" value="grid" id="filter-grid">
-                      <span class="radio__box"></span>
                       Сетевые
                     </label>
                   </li>
@@ -227,17 +232,17 @@
                   <li class="sorting__item">
                     <a href="#"> По типу</a>
                   </li>
-                  <li class="sorting__item">
+                  <li class="sorting__item sorting__item-last">
                     <a href="#"> По функционалу</a>
                   </li>
                 </ul>
               </div>
-              <div class="sorting__toggles">
+              <div class="sorting__toggles sorting__toggles--red">
                 <a class="sorting__link-up" href="#" aria-label="По возрастанию">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="10px"
                     viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
-                    <polygon class="active-svg" fill="#C5C5C5" points="5.5,0 0,10 11,10 ">
+                    <polygon class="active-svg red-svg" fill="#C5C5C5" points="5.5,0 0,10 11,10 ">
                     </polygon>
                   </svg>
                 </a>
@@ -409,17 +414,14 @@
 
             <div class="pagination">
               <ul class="pagination__list">
-                <li class="pagination__item">
-                  <a class="pagination__link pagination__link--current">1</a>
+                <li class="pagination__item pagination__item--current">
+                  <a class="pagination__link">1</a>
                 </li>
                 <li class="pagination__item">
                   <a class="pagination__link" href="#">2</a>
                 </li>
                 <li class="pagination__item">
                   <a class="pagination__link" href="#">3</a>
-                </li>
-                <li class="pagination__item">
-                  <a class="pagination__link" href="#">4</a>
                 </li>
                 <li>
                   <a class="pagination__button" href="#">Следующая</a>
@@ -538,12 +540,12 @@
           </ul>
         </div>
 
-        <p class="footer__text">
+        <p class="footer__text footer__text-mail">
           <span>Обратная связь:</span>
           <a href="#">mail@htmlacademy.ru</a>
         </p>
 
-        <p class="footer__text">
+        <p class="footer__text footer__text-url">
           <span>Разработано -</span>
           <a class="footer-bottom__link" href="#">htmlacademy.ru</a>
         </p>
