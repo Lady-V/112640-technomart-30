@@ -190,6 +190,14 @@ img {
   color: var(--white);
 }
 
+.header__search input::placeholder {
+  color: var(--white);
+}
+
+.header__search input:focus::placeholder {
+  color: var(--black);
+}
+
 .header__search .search__button {
   position: absolute;
   width: 17px;
@@ -218,7 +226,6 @@ img {
 
 .header__search .header__input:focus {
   background-color: var(--white);
-  color: var(--black);
 }
 
 .header__input:focus+.search__button svg {
@@ -293,21 +300,22 @@ img {
   left: 6px;
 }
 
-.header__bookmarks:hover:before {
+.header__bookmarks:hover::before {
   opacity: 100%;
 }
 
-.header__bookmarks:hover:active {
+.header__bookmarks:active {
   opacity: 0.3;
 }
 
-.header__bookmarks:hover:focus {
+.header__bookmarks:focus {
   opacity: 0.3;
 }
 
 .header__bookmarks:active {
   color: rgba(255, 255, 255, 0.5);
   background-color: var(--darkdarkblue);
+
 }
 
 .header__bookmarks:focus {
@@ -388,6 +396,8 @@ img {
 .header__user-menu {
   padding-top: 46px;
   display: flex;
+  width: 299px;
+  justify-content: flex-end;
 }
 
 .header__user-menu a {
@@ -712,7 +722,7 @@ img {
 }
 
 .features {
-  margin-top: 62px;
+  margin-top: 59px;
   margin-bottom: 59px;
   box-sizing: border-box;
   padding-left: 0;
@@ -2491,21 +2501,18 @@ img {
 .pagination__item a:hover {
   border: 1px solid var(--basic-greylight);
   border-radius: 2px;
-  background-color: var(--white);
 }
 
 .pagination__item a:active {
   border: 1px solid var(--basic-red);
   border-radius: 2px;
-  background-color: var(--white);
 }
 
+.pagination__item,
 .pagination__item--current a {
   background-color: var(--basic-red);
+  border-color: var(--basic-red);
   color: var(--white);
-  border: none;
-  padding-right: 16px;
-  padding-top: 11px;
 }
 
 .pagination__button {
