@@ -198,7 +198,6 @@ img {
   left: 17px;
   background-color: transparent;
   border: none;
-  opacity: 0.3;
   padding: 0;
   cursor: pointer;
 }
@@ -207,14 +206,14 @@ img {
   background-color: var(--basic-darkblue);
 }
 
-.header__input:hover+.search__button {
-  fill: var(--white);
-  opacity: 1;
-}
-
-.header__input:active+.search__button {
+.header__search .search__button svg {
   fill: var(--white);
   opacity: 0.3;
+}
+
+.header__input:hover+.search__button svg {
+  fill: var(--white);
+  opacity: 1;
 }
 
 .header__search .header__input:focus {
@@ -222,8 +221,9 @@ img {
   color: var(--black);
 }
 
-.header__input:focus+.search__button:hover {
+.header__input:focus+.search__button svg {
   fill: var(--basic-red);
+  opacity: 1;
 }
 
 .header__logo .header__image {
@@ -384,8 +384,6 @@ img {
   line-height: 24px;
   font-weight: 400;
 }
-
-
 
 .header__user-menu {
   padding-top: 46px;
@@ -2504,6 +2502,7 @@ img {
 
 .pagination__item--current a {
   background-color: var(--basic-red);
+  color: var(--white);
   border: none;
   padding-right: 16px;
   padding-top: 11px;
