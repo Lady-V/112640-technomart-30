@@ -1298,15 +1298,10 @@ img {
   cursor: pointer;
 }
 
-.services-toggles__item--active p {
-  color: var(--basic-grey);
-  background-color: var(--white);
-  box-shadow: 0px 1px 0px #FFFFFF, inset 0px 1px 0px #FFFFFF;
-}
-
 .services-toggles__item p:hover {
   background-color: var(--basic-darkblue);
   box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+  color: var(--white);
 }
 
 .services-toggles__item p:active {
@@ -1315,7 +1310,7 @@ img {
   box-shadow: 0px 1px 0px #FFFFFF, inset 0px 1px 0px #FFFFFF;
 }
 
-.services-toggles__item--active {
+.services__bottom-list .services-toggles__item--active p {
   color: var(--basic-grey);
   background-color: var(--white);
   box-shadow: 0px 1px 0px #FFFFFF, inset 0px 1px 0px #FFFFFF;
@@ -2278,11 +2273,11 @@ img {
   left: 32px;
 }
 
-.sorting__toggles .active-svg:hover {
+.sorting__toggles .ordinary-svg:hover {
   fill: var(--black);
 }
 
-.sorting__toggles .active-svg:active {
+.sorting__toggles .ordinary-svg:active {
   fill: var(--basic-red);
 }
 
